@@ -22,3 +22,19 @@ document.addEventListener("DOMContentLoaded", function() {
     updateCountdown();
     const interval = setInterval(updateCountdown, 1000);
 });
+
+let currentSlide = 0;
+
+function moveSlide(direction) {
+    const slides = document.querySelectorAll(".carousel-slide img");
+    const totalSlides = slides.length;
+
+    currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+
+    const slideWidth = slides[0].clientWidth;
+    const carouselSlide = document.querySelector(".carousel-slide");
+
+    carouselSlide.style.transition = "transform 0.5s ease-in-out";
+    carouselSlide.style.transform = `translateX(${-currentSlide * slideWidth}px)`;
+}
+

@@ -11,17 +11,29 @@
     <div class="container">
         <header>
             <h1>Casamento de Kesia Lara Estival e Bruno Guimarães Priego</h1>
-            <p>Data: Dia 28/12/2024</p>
+            <p>Dia 28/12/2024</p>
         </header>
         <main>
             <section class="countdown">
                 <h2>Contagem Regressiva</h2>
                 <div id="countdown"></div>
             </section>
-            <section class="photos">
+            <section class="carousel">
                 <h2>Fotos do Evento</h2>
-                <img src="evento.jpg" alt="Foto do evento" class="event-photo">
-                <img src="casal.jpg" alt="Foto do casal" class="couple-photo">
+                <div class="carousel-container">
+                    <div class="carousel-slide">
+                        <img src="1.jpg" alt="Foto do casal">
+                        <img src="2.jpg" alt="Foto do casal">
+                        <img src="3.jpg" alt="Foto do casal">
+                        <img src="4.jpg" alt="Foto do casal">
+                        <img src="5.jpg" alt="Foto do casal">
+                        <img src="6.jpg" alt="Foto do casal">
+                        <img src="7.jpg" alt="Foto do casal">
+                        <img src="8.jpg" alt="Foto do casal">
+                    </div>
+                </div>
+                <button class="carousel-button prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="carousel-button next" onclick="moveSlide(1)">&#10095;</button>
             </section>
             <section class="links">
                 <h2>Listas de Presentes</h2>
