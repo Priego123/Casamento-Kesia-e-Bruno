@@ -58,15 +58,15 @@ header p {
 .carousel-slide {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    justify-content: center;
 }
 
 .carousel-slide img {
     align-items: center;
-    width: 600px;
+    max-height: 900px;
     border-radius: 50px;
     margin: 10px 0;
-    padding: 20px;
+    padding: 20px;  
+
 }
 
 .carousel-button {

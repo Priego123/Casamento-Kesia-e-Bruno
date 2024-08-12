@@ -31,10 +31,10 @@ function moveSlide(direction) {
 
     currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
 
-    const slideWidth = slides[0].clientWidth;
+    const slideWidth = slides[currentSlide].clientWidth;
     const carouselSlide = document.querySelector(".carousel-slide");
 
-    carouselSlide.style.transition = "transform 0.5s ease-in-out";
-    carouselSlide.style.transform = `translateX(${-currentSlide * slideWidth}px)`;
+    // Novo cálculo para centralização e evitar espaços em branco
+    const offset = (carouselSlide.clientWidth - slideWidth) / 2;
+    carouselSlide.style.transform = `translateX(${-currentSlide * slideWidth + offset}px)`;
 }
-
