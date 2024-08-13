@@ -14,7 +14,7 @@ body {
 .container {
     text-align: center;
     padding: 20px;
-    border: 5px solid #ca1212;
+    border: 5px solid #9e3447;
     border-radius: 55px;
     background-color: #f7d3c5;
     max-width: 800px;
@@ -23,26 +23,26 @@ body {
 }
 
 header h1 {
-    color: #ca1212;
+    color: #9e3447;
     font-size: 3.5em;
     margin-bottom: 10px;
 }
 
 header p {
-    color: #ca1212;
-    font-size:2rem;
+    color: #9e3447;
+    font-size:2.5rem;
     margin-bottom: 20px;
 }
 
 .countdown h2 {
-    color: #ca1212;
-    font-size: 3em;
+    color: #9e3447;
+    font-size: 3.5em;
     margin-bottom: 10px;
 }
 
 #countdown {
-    font-size: 2em;
-    color: #ca1212;
+    font-size: 2.5em;
+    color: #9e3447;
 }
 
 .carousel {
@@ -85,7 +85,7 @@ header p {
     cursor: pointer;
     border-radius: 50%;
     font-size: 1.5em;
-    color: #ca1212;
+    color: #9e3447;
     box-shadow: 1px 1px 10px #333;
     display: flex;
     justify-content: center;
@@ -120,7 +120,7 @@ header p {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: #ca1212; /* Cor das bolinhas */
+    background-color: #9e3447; /* Cor das bolinhas */
     margin: 0 5px;
     cursor: pointer;
     opacity: 0.5; /* Bolinhas inativas */
@@ -160,7 +160,7 @@ header p {
     overflow: hidden;
     font-weight: bold;
     color: #fff;
-    border: 3px solid #ca1212;
+    border: 3px solid #9e3447;
 }
 
 #first {
@@ -175,7 +175,7 @@ header p {
 
 #third {
     grid-area: td;
-    background: #ca1212;
+    background: #9e3447;
     justify-content: space-evenly;
 }
 
@@ -186,7 +186,7 @@ header p {
 
 #forth {
     grid-area: fh;
-    background: #ca1212;
+    background: #9e3447;
     justify-content: space-evenly;
 }
 
@@ -208,7 +208,7 @@ header p {
 }
 
 .links h2 {
-    color: #ca1212;
+    color: #9e3447;
     font-size: 2em;
     margin: 0px;
 }
@@ -226,8 +226,8 @@ header p {
 @media screen and (max-width: 500px) {
 
     body {
-        border-left: 5px solid #ca1212;
-        border-right: 5px solid #ca1212;
+        border-left: 5px solid #9e3447;
+        border-right: 5px solid #9e3447;
     background-color: #f7d3c5;
     }
 
