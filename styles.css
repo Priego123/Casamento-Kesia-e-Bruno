@@ -159,7 +159,7 @@ header p {
     box-shadow: 1px 1px 10px #333;
     overflow: hidden;
     font-weight: bold;
-    color: #333;
+    color: #fff;
     border: 3px solid #ca1212;
 }
 
@@ -175,18 +175,24 @@ header p {
 
 #third {
     grid-area: td;
-    background: #b7fca4;
+    background: #ca1212;
     justify-content: space-evenly;
 }
 
 #third img {
     width: 150px;
+    margin-top: 5px;
 }
 
 #forth {
     grid-area: fh;
-    background: #d4f9b3;
+    background: #ca1212;
     justify-content: space-evenly;
+}
+
+#forth img {
+    width: 150px;
+    margin-top: 5px;
 }
 
 .button img {
@@ -242,14 +248,14 @@ header p {
     .container .links img {
     width: 100%;
     }
-
-    .links #forth img {
-    width: 70px;
-    }
-
+    
     .links #third img {
         margin-top: 5px;
         width: 40px;
     }
+    
+        .links #forth img {
+        width: 40px;
+        }
 
 }
