@@ -141,8 +141,9 @@ header p {
     'td fh'
     ;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 25px 1fr 25px 1fr;
+    grid-template-rows: 65px 1fr 140px 1fr;
     gap: 20px;
+    font-size: 2rem;
 }
 
 .button {
@@ -151,7 +152,6 @@ header p {
     justify-content: center;
     align-items: center;
     padding: 15px;
-    font-size: 1.2em;
     color: white;
     text-decoration: none;
     border-radius: 25px;
@@ -174,6 +174,7 @@ header p {
 }
 
 #third {
+    font-size: 2rem;
     grid-area: td;
     background: #9e3447;
     justify-content: space-evenly;
@@ -185,6 +186,7 @@ header p {
 }
 
 #forth {
+    font-size: 2rem;
     grid-area: fh;
     background: #9e3447;
     justify-content: space-evenly;
@@ -242,15 +244,20 @@ header p {
     }
 
     .links{
-        grid-template-rows: 25px 1fr 60px 1fr;
+        grid-template-rows: 30px 1fr 75px 1fr;
+        font-size: 1.2rem;
     }
     
     .container .links img {
     width: 100%;
     }
     
+    .links #third, #forth {
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+
     .links #third img {
-        margin-top: 5px;
         width: 40px;
     }
     
