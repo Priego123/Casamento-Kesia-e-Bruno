@@ -38,3 +38,74 @@ function moveSlide(direction) {
     const offset = (carouselSlide.clientWidth - slideWidth) / 2;
     carouselSlide.style.transform = `translateX(${-currentSlide * slideWidth + offset}px)`;
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    const carouselSlide = document.querySelector(".carousel-slide");
+    const slides = document.querySelectorAll(".carousel-slide img");
+    let isDragging = false;
+    let startPosition = 0;
+    let currentTranslate = 0;
+    let prevTranslate = 0;
+    let animationID = 0;
+    let currentIndex = 0;
+
+    carouselSlide.addEventListener('touchstart', touchStart);
+    carouselSlide.addEventListener('touchend', touchEnd);
+    carouselSlide.addEventListener('touchmove', touchMove);
+
+    function touchStart(event) {
+        isDragging = true;
+        startPosition = getPositionX(event);
+        animationID = requestAnimationFrame(animation);
+    }
+
+    function touchEnd() {
+        isDragging = false;
+        cancelAnimationFrame(animationID);
+
+        const movedBy = currentTranslate - prevTranslate;
+
+        if (movedBy < 0) {
+            if (currentIndex < slides.length - 1) {
+                currentIndex += 1;
+            } else {
+                // Se estiver na última imagem, volta para a primeira
+                currentIndex = 0;
+            }
+        } else if (movedBy > 0 && currentIndex > 0) {
+            currentIndex -= 1;
+        }
+
+        setPositionByIndex();
+    }
+
+    function touchMove(event) {
+        if (!isDragging) return;
+        const currentPosition = getPositionX(event);
+        currentTranslate = prevTranslate + currentPosition - startPosition;
+    }
+
+    function getPositionX(event) {
+        return event.touches[0].clientX;
+    }
+
+    function animation() {
+        setSliderPosition();
+        if (isDragging) requestAnimationFrame(animation);
+    }
+
+    function setSliderPosition() {
+        carouselSlide.style.transform = `translateX(${currentTranslate}px)`;
+    }
+
+    function setPositionByIndex() {
+        const slideWidth = slides[currentIndex].clientWidth;
+        const offset = (carouselSlide.clientWidth - slideWidth) / 2;
+        currentTranslate = -currentIndex * slideWidth + offset;
+        prevTranslate = currentTranslate;
+        setSliderPosition();
+    }
+
+    // Inicializa o carrossel com a primeira imagem centralizada
+    setPositionByIndex();
+});
