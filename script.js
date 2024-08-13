@@ -56,24 +56,26 @@ document.addEventListener("DOMContentLoaded", function() {
     function touchStart(event) {
         isDragging = true;
         startPosition = getPositionX(event);
-        animationID = requestAnimationFrame(animation);
+        prevTranslate = currentTranslate; // Salva a posição atual
+        cancelAnimationFrame(animationID);
     }
 
     function touchEnd() {
         isDragging = false;
-        cancelAnimationFrame(animationID);
 
         const movedBy = currentTranslate - prevTranslate;
 
-        if (movedBy < 0) {
+        if (movedBy < -100) {
             if (currentIndex < slides.length - 1) {
                 currentIndex += 1;
             } else {
                 // Se estiver na última imagem, volta para a primeira
                 currentIndex = 0;
             }
-        } else if (movedBy > 0 && currentIndex > 0) {
-            currentIndex -= 1;
+        } else if (movedBy > 100) {
+            if (currentIndex > 0) {
+                currentIndex -= 1;
+            }
         }
 
         setPositionByIndex();
@@ -102,7 +104,6 @@ document.addEventListener("DOMContentLoaded", function() {
         const slideWidth = slides[currentIndex].clientWidth;
         const offset = (carouselSlide.clientWidth - slideWidth) / 2;
         currentTranslate = -currentIndex * slideWidth + offset;
-        prevTranslate = currentTranslate;
         setSliderPosition();
     }
 

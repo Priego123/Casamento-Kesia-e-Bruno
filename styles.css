@@ -176,6 +176,17 @@ header p {
 /* Responsividade mobile */
 @media screen and (max-width: 500px) {
 
+    body {
+        border: 5px solid #d4af37;
+    border-radius: 55px;
+    background-color: #fdc5c3;
+    }
+
+    .container {
+        border: none;
+        border-radius: none;
+    }
+
     .carousel-container img {
         width: 100%;
     }
