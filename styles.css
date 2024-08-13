@@ -106,7 +106,7 @@ header p {
     align-items: center;
     margin-top: 10px;
     padding: 5px;
-    background-color: rgba(80, 80, 80, 0.6);
+    background-color: #9e3447;
     border-radius: 25px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombreamento */
     width: fit-content;
@@ -120,7 +120,7 @@ header p {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: #9e3447; /* Cor das bolinhas */
+    background-color: #fff; /* Cor das bolinhas */
     margin: 0 5px;
     cursor: pointer;
     opacity: 0.5; /* Bolinhas inativas */
