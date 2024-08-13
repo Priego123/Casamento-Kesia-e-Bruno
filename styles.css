@@ -90,16 +90,46 @@ header p {
     right: 10px;
 }
 
-.links h2 {
-    color: #d4af37;
-    font-size: 2em;
-    margin: 20px 0 10px;
+.links {
+    display: grid;
+    grid-template-areas:
+    'head head'
+    'ft sec'
+    'td fh'
+    ;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px auto auto;
+    gap: 20px;
+}
+
+
+#first {
+    grid-area: ft;
+    background: aqua;
+    color: navy;
+}
+
+#second {
+    grid-area: sec;
+    background: navy;
+}
+
+#third {
+    grid-area: td;
+    background: red;
+}
+
+#forth {
+    grid-area: fh;
+    background: green;
 }
 
 .button {
-    display: block;
-    margin: 10px auto;
-    padding: 15px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
     font-size: 1.2em;
     color: white;
     background-color: #d4af37;
@@ -108,10 +138,21 @@ header p {
     transition: background-color 0.3s ease;
 }
 
+.button img {
+    width: 200px;
+}
+
 .button:hover {
     background-color: #d4af37;
 }
 
 .button:active {
     background-color: #d4af37;
+}
+
+.links h2 {
+    grid-area: head;
+    color: #d4af37;
+    font-size: 2em;
+    margin: 20px 0 10px;
 }
